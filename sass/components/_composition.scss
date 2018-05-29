@@ -1,0 +1,34 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 100%;
+
+        border-radius: 2px;
+        position: absolute;
+        z-index: 1;
+        transition: all .2s;
+
+        @include respond(tab-port) {
+
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        }
+
+
+
+        &:hover {
+            transform: scale(1.01) rotate(-1deg);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+            z-index: 20;
+        }
+
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
+    //composition:hover composition__photo:not(:hover) {
+}

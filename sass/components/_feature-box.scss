@@ -1,0 +1,15 @@
+.feature-box {
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 4rem;
+    text-align: center;
+    border-radius: 3px;
+    transition: transform .3s;
+    color: $color-grey-dark;
+
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
+
+
+}
